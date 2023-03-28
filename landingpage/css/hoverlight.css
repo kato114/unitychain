@@ -1,0 +1,7 @@
+.hoverlight {
+    content: "";
+    background-image: radial-gradient(300px circle at var(--mouse-x) var(--mouse-y),
+            #2b2b2b,
+            transparent 40%);
+    z-index: 3;
+}

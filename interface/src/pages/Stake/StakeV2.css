@@ -1,0 +1,216 @@
+.StakeV2 .Page-title-section {
+  position: relative;
+  z-index: 2;
+}
+
+.VesterDepositModal-info-rows {
+  margin-bottom: 0.8rem;
+}
+
+.CompoundModal-menu {
+  margin-bottom: 0.8rem;
+}
+
+.CompoundModal-menu .Checkbox {
+  margin-bottom: 0.465rem;
+}
+
+.StakeV2-address-input {
+  padding: 1.5rem 3.41rem;
+  padding-bottom: 0;
+}
+
+.StakeV2-buy-unity-modal .Modal-content {
+  max-width: 46.5rem;
+}
+
+.StakeV2-address-input input {
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 1.7rem;
+}
+
+.StakeV2-boost-bar {
+  overflow: hidden;
+  vertical-align: middle;
+  margin-left: 0.31rem;
+  border-radius: 2px;
+  width: 1.5rem;
+  height: 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  display: inline-block;
+  position: relative;
+}
+
+.StakeV2-boost-icon {
+  font-size: 1.085rem;
+  z-index: 2;
+}
+
+.StakeV2-boost-bar-fill {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: #000000;
+}
+
+.StakeV3-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 100px;
+}
+
+.StakeV3-cards .App-card:first-child {
+  border: 1px solid #474747;
+  border-radius: 10px;
+  background: url(../../img/bg-vest1.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.StakeV3-cards .App-card:last-child {
+  border: 1px solid #474747;
+  border-radius: 10px;
+  background: url(../../img/bg-vest2.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.StakeV3-cards .App-card-title {
+  justify-content: center;
+  margin: 10px 0px 0px 0px;
+}
+
+.StakeV3-cards .App-card-content {
+  background: none;
+  border: none;
+  display: block;
+  padding: 15px 0px 20px 0px;
+}
+
+.StakeV3-cards .App-card-content .App-card-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.StakeV2-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  gap: 10px;
+}
+
+.StakeV2-content .App-card {
+  width: 100%;
+  background-color: #1e1e1e;
+  border: 1px solid #474747;
+  border-radius: 10px;
+  padding: 0px;
+  height: fit-content;
+}
+
+.StakeV4-content .App-card {
+  padding: 0px;
+  margin-bottom: 50px;
+}
+
+.StakeV4-content .App-card-footer {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.StakeV2-content .App-card-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding: 30px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-bottom: 10px;
+}
+.StakeV2-content .App-card-title div {
+  font-size: 20px;
+}
+
+.StakeV2-content .App-card-content {
+  border: none;
+  background: none;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.StakeV2-content .App-card-content .App-card-options {
+  margin: 20px 0px;
+}
+
+.StakeV2-content .App-card-content > div:not(.App-card-options) {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.StakeV2-content .App-card-content > div > .App-card-row {
+  text-align: center;
+}
+.StakeV2-content .App-card-content > div > .App-card-row:first-child {
+  text-align: left;
+}
+
+.StakeV2-content .App-card-content > div > .App-card-row:last-child {
+  text-align: right;
+}
+
+.StakeV2-content .StakeV2-unity-card .App-card-title {
+  background: url(../../img/bg-unity-stake.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.StakeV2-content .StakeV2-ulp-card .App-card-title {
+  background: url(../../img/bg-ulp-stake.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.StakeV2-content .StakeV2-esUnity-card .App-card-title {
+  background: url(../../img/bg-esunity-stake.png);
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 1033px) {
+  .py-100 {
+    padding-top: 30px !important;
+    padding-bottom: 80px !important;
+  }
+
+  .StakeV4-content .App-card-title {
+    text-align: center;
+    justify-content: center;
+  }
+  .StakeV4-content .App-card-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .StakeV4-content .App-card-footer {
+    justify-content: center;
+  }
+
+  .StakeV3-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .StakeV2-content {
+    grid-template-columns: 1fr;
+  }
+
+  .StakeV2-total-rewards-card {
+    grid-row: 4;
+  }
+}

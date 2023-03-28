@@ -1,0 +1,358 @@
+:root {
+    --paraline-color: var(--color-primary-very-dark);
+    --paraline-bgr-color: var(--color-primary);
+}
+
+.paraline {
+    display: none;
+}
+
+.para-wrapper {
+    border-radius: var(--unitypad-border-radius);
+    border: 1px solid var(--unitypad-border-color);
+    background-color: black;
+    overflow: hidden;
+    height: fit-content;
+    position: relative;
+    padding: 15px;
+    margin: 10px;
+    transition: all ease-in 200ms;
+}
+.para-wrapper:hover {
+    filter: drop-shadow(0px 0px 40px var(--color-primary-very-dark));
+    border: 1px solid var(--color-primary-very-dark);
+
+}
+
+.para-wrapper .decoration {
+    position: absolute;
+    opacity: 0.6;
+    transform: rotate(-45deg);
+    top: -40px;
+    right: 5px;
+}
+
+.para-wrapper .content {
+    position: relative;
+    z-index: 3;
+}
+
+.para-wrapper .content p span {
+    color: var(--color-primary);
+}
+
+.block-wrapper .block-image {
+    display: none;
+    position: absolute;
+    width: auto;
+    height: fit-content;
+}
+
+.paraline {
+    --target1: 2s;
+    --target2: 2s;
+    --target3: 2s;
+}
+
+.para-wrapper.first:hover ~ .paraline.first {
+    --target1: 500ms;
+}
+.para-wrapper.second:hover ~ .paraline.second {
+    --target2: 500ms;
+}
+.para-wrapper.last:hover ~ .paraline.last {
+    --target3: 500ms;
+}
+
+
+.paraline.first {
+    animation: glowAnimation var(--target1) infinite;
+}
+
+.paraline.first.bgr {
+    filter: blur(5px);
+    animation: glowAnimation2 var(--target1) infinite;
+}
+
+.paraline.second {
+    animation: glowAnimation var(--target2) infinite;
+}
+
+.paraline.second.bgr {
+    filter: blur(5px);
+    animation: glowAnimation var(--target2) infinite;
+}
+
+.paraline.last {
+    animation: glowAnimation var(--target3) infinite;
+}
+
+.paraline.last.bgr {
+    filter: blur(5px);
+    animation: glowAnimation var(--target3) infinite;
+}
+/*
+.block-root:hover .paraline {
+    --target: 1;
+}*/
+@keyframes glowAnimation {
+    0% {
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.2;
+    }
+}
+
+@keyframes glowAnimation2 {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+@media (min-width: 992px) {
+
+    .block-root {
+        min-height: 75vh;
+    }
+
+    .block-wrapper {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        top: 50%;
+    }
+
+    .paraline {
+        position: absolute;
+        display: block;
+    }
+
+    .para-wrapper {
+        border: 1px solid rgba(128, 128, 128, 0.555);
+        padding: 0px;
+        position: absolute;
+        background-color: black;
+        overflow: hidden;
+    }
+
+    .para-wrapper .decoration {
+        position: absolute;
+        opacity: 0.6;
+    }
+
+
+    .para-wrapper .content {
+        padding: 20px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .para-wrapper .content .title {
+        font-size: 19px;
+        margin: 0px;
+    }
+
+    .para-wrapper .content p {
+        font-size: 14px;
+        margin: 0px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .block-wrapper .block-image {
+        display: block;
+        position: relative;
+        width: calc(315px - 60px);
+        height: calc(444px - 60px);
+    }
+
+    .paraline.first {
+        top: 20%;
+        right: 100%;
+    }
+
+    .para-wrapper.first {
+        top: calc(5% - 110px + 90px);
+        right: calc(100% + 100px);
+        width: 240px;
+        height: 135px;
+    }
+
+    .para-wrapper.first .decoration {
+        transform: rotate(-45deg);
+        top: -40px;
+        right: 5px;
+    }
+
+    .paraline.second {
+        top: 50%;
+        left: 100%;
+        transform: scaleX(-1);
+    }
+
+    .para-wrapper.second {
+        text-align: start;
+        top: calc(50% - 110px + 30px);
+        left: calc(100% + 100px);
+        width: 240px;
+        height: 245px;
+    }
+
+    .para-wrapper.second .decoration {
+        transform: rotate(-45deg);
+        top: -40px;
+        right: 5px;
+    }
+
+    .paraline.last {
+        top: 73%;
+        right: 100%;
+    }
+
+    .para-wrapper.last {
+        top: calc(73% - 110px + 90px);
+        right: calc(100% + 100px);
+        width: 240px;
+        height: 125px;
+    }
+
+    .para-wrapper.last .decoration {
+        transform: rotate(135deg);
+        top: 25%;
+        left: 0px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .paraline.first {
+        top: 20%;
+        right: 100%;
+    }
+
+    .para-wrapper.first {
+        top: calc(5% - 110px + 90px);
+        right: calc(100% + 100px);
+        width: 320px;
+        height: 116px;
+    }
+
+    .para-wrapper.first .decoration {
+        transform: rotate(-45deg);
+        top: -40px;
+        right: 5px;
+    }
+
+    .paraline.second {
+        top: 50%;
+        left: 100%;
+        transform: scaleX(-1);
+    }
+
+    .para-wrapper.second {
+        text-align: end;
+        top: calc(50% - 110px + 90px);
+        left: calc(100% + 100px);
+        width: 350px;
+        height: 185px;
+    }
+
+    .para-wrapper.second .decoration {
+        transform: rotate(-45deg);
+        top: -40px;
+        right: 5px;
+    }
+
+    .paraline.last {
+        top: 73%;
+        right: 100%;
+    }
+
+    .para-wrapper.last {
+        top: calc(73% - 110px + 90px);
+        right: calc(100% + 100px);
+        width: 320px;
+        height: 110px;
+    }
+
+    .para-wrapper.last .decoration {
+        transform: rotate(135deg);
+        bottom: -50px;
+        left: 5px;
+    }
+}
+
+@media (min-width: 1400px) {
+
+    .paraline.first {
+        top: 20%;
+        right: 100%;
+    }
+
+    .para-wrapper.first {
+        top: calc(5% - 110px + 90px);
+        right: calc(100% + 100px);
+        width: 450px;
+        height: 100px;
+    }
+
+    .para-wrapper.first .decoration {
+        transform: rotate(-45deg);
+        top: -40px;
+        right: 5px;
+    }
+
+    .paraline.second {
+        top: 50%;
+        left: 100%;
+        transform: scaleX(-1);
+    }
+
+    .para-wrapper.second {
+        text-align: end;
+        top: calc(50% - 110px + 90px);
+        left: calc(100% + 100px);
+        width: 420px;
+        height: 162px;
+    }
+
+    .para-wrapper.second .decoration {
+        transform: rotate(-45deg);
+        top: -40px;
+        right: 5px;
+    }
+
+    .paraline.last {
+        top: 73%;
+        right: 100%;
+    }
+
+    .para-wrapper.last {
+        top: calc(73% - 110px + 90px);
+        right: calc(100% + 100px);
+        width: 320px;
+        height: 110px;
+    }
+
+    .para-wrapper.last .decoration {
+        transform: rotate(135deg);
+        top: 25%;
+        left: 0px;
+    }
+}

@@ -1,0 +1,26 @@
+.card {
+  background: #1e1e1e;
+  border: 1px solid #474747;
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+.card-header {
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  font-weight: 700;
+  letter-spacing: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.5rem;
+}
+
+.card-divider {
+  height: 1px;
+  background: #474747;
+}
+.card-body {
+  padding: 1.5rem;
+  color: #ffffff;
+}

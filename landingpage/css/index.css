@@ -1,0 +1,327 @@
+:root {
+    --unitypad-font-main: "Akkurat-Regular";
+    --unitypad-font-main-bold: "Akkurat-Bold";
+    --unitypad-font-main-light: "Akkurat-Light";
+
+    --color-primary: #d31919;
+    --color-primary-hover: #e62828;
+    --color-primary-dark: #b51515;
+    --color-primary-very-dark: #780e0e;
+    --color-white: #fff;
+    --color-grey: #9a9a9a;
+
+
+    /* Navbar customization */
+    --unitypad-navbar-background: #121212;
+    --unitypad-navbar-background-pc: transparent;
+    --unitypad-navbar-link: #fff;
+    --unitypad-navbar-link-active: var(--color-primary);
+    --unitypad-navbar-link-hover: var(--color-primary-hover);
+    --unitypad-navbar-animations-length: 250ms;
+
+    /* --unitypad-button-background: #1e1e1e; */
+    --unitypad-button-background: var(--unitypad-panel-background);
+    
+    --unitypad-border-radius: 15px;
+    --unitypad-border-width: 1px;
+    --unitypad-border-color: #8080808e;
+
+    --unitypad-page-background: #121212;
+
+    --unitypad-panel-background: #191919;
+    --unitypad-panel-background-secondary: #1e1e1e;
+
+    --unitypad-navbar-height: 80px;
+
+    --app-part-section-margin: 150px;
+
+    --footer-icon-size: 25px;
+}
+
+body {
+    font-family: var(--unitypad-font-main);
+    color: red;
+    background-color: var(--unitypad-page-background);
+}
+
+.color-primary {
+    color: var(--color-primary);
+}
+
+.color-white {
+    color: var(--color-white);
+}
+.color-grey {
+    color: var(--color-grey)!important;
+}
+section {
+    color: var(--color-white);
+}
+
+section span {
+    color: var(--color-primary);
+}
+
+/**
+** Sections
+**/
+
+/** Masthead */
+section#masthead .masthead-content {
+    position: relative;
+    max-width: 800px;
+}
+
+section#masthead h1 {
+    font-family: var(--unitypad-font-main-bold);
+    font-size: 3rem;
+}
+
+section#masthead p {
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+
+section#masthead :is(h1, p, button) {
+    position: relative;
+    z-index: 2;
+}
+
+section#masthead .masthead-background-logo {
+    position: absolute;
+    opacity: 0.2;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 456px;
+}
+
+
+/** Protocols  */
+.protocol-card {
+    background-color: var(--unitypad-panel-background);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 10px;
+    border-radius: var(--unitypad-border-radius);
+}
+
+.protocol-decoration {
+    position: absolute;
+    z-index: 1;
+    transform: rotate(-45deg) scale(1.1);
+    bottom: -40px;
+    left: 0px;
+
+}
+
+.protocol-card .content {
+    position: relative;
+    z-index: 2;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.protocol-card .protocol-icon {
+    height: 100%;
+    margin: auto;
+    max-height: 88px;
+}
+
+.protocol-card .content h4 {
+    font-family: var(--unitypad-font-main-light);
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.protocol-card .content p {
+    font-family: var(--unitypad-font-main-bold);
+    font-size: 1.4rem;
+    margin-bottom: 0;
+}
+
+.protocol-card {
+    width: 100%;
+}
+
+.protocol-card .content p {
+    font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+    .protocol-card {
+        height: 200px;
+        width: 200px;
+    }
+
+    .protocol-card .content h4 {
+        font-size: 0.6rem;
+    }
+
+    .protocol-card .content p {
+        font-size: 1rem;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .protocol-card {
+        height: 240px;
+        width: 240px;
+    }
+
+    .protocol-card .content h4 {
+        font-size: 1rem;
+    }
+
+    .protocol-card .content p {
+        font-size: 1.4rem;
+    }
+
+}
+
+
+/** Partners */
+
+.partner {
+    flex: 0 1;
+    min-width: 200px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 5px;
+    background-color: var(--unitypad-panel-background);
+    border: 1px var(--unitypad-border-color) solid;
+    border-radius: var(--unitypad-border-radius);
+
+}
+
+.partner img {
+    z-index: 2;
+    margin: 0 auto;
+    padding-top: 10px;
+    margin-top: auto;
+    width: 100%;
+    max-width: 50px;
+}
+
+.partner-decoration {
+    position: absolute;
+    z-index: 1;
+    transform: rotate(-45deg) scale(1.1);
+    bottom: -40px;
+    left: 0px;
+
+}
+
+.partner .name {
+    z-index: 2;
+    font-size: 1rem;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: auto;
+}
+
+/** Buttons */
+
+.unitypad-button-main {
+    width: fit-content;
+    height: fit-content;
+    border: var(--unitypad-border-width) solid;
+    border-color: var(--unitypad-border-color);
+    background-color: var(--unitypad-button-background);
+    transition: border-color var(--unitypad-navbar-animations-length) ease-in-out, transform 50ms ease-in-out;
+    color: var(--unitypad-color-white);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: var(--unitypad-border-radius);
+}
+
+.unitypad-button-main:hover {
+    border-color: var(--unitypad-navbar-link-hover);
+}
+
+.unitypad-button-main:active {
+    border-color: var(--unitypad-navbar-link-active);
+    transform: scale(1.06);
+}
+
+
+/** Footer */
+.footer-text {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 14px;
+}
+
+.footer-logo {
+    height: var(--footer-icon-size);
+}
+
+.footer-icon {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: var(--footer-icon-size);
+    height: var(--footer-icon-size);
+}
+
+.footer-icon-alt {
+    display: flex;
+}
+
+.footer-icon-alt img {
+    width: var(--footer-icon-size);
+    height: var(--footer-icon-size);
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/** Cursed */
+.gradientCanvas {
+    background-color: rgb(56, 0, 0);
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.pg-bgr {
+    background-color: var(--unitypad-page-background);
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    .pg-bgr {
+        background-color: transparent;
+        background-image: linear-gradient(90deg, #121212b9, var(--unitypad-page-background) 10% 90%, #121212b9);
+    }
+
+}
+
+
+.font-regular {
+    font-family: var(--unitypad-font-main);
+}
+
+.font-bold {
+    font-family: var(--unitypad-font-main-bold);
+}
+
+.font-light {
+    font-family: var(--unitypad-font--main-light);
+}

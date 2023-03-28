@@ -1,0 +1,23 @@
+.TradeHistory-row {
+  font-size: 1.4rem;
+  padding: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.TradeHistory-time {
+  font-size: 1.25rem;
+  margin-bottom: 0.155rem;
+}
+
+.TradeHistory {
+  background: #1e1e1e;
+  border: 1px solid #474747;
+  min-height: 400px;
+}
+
+.TradeHistory-row-empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}

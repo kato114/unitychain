@@ -1,0 +1,409 @@
+.list-app-wrapper {
+    margin: 0 auto;
+    width: 940px;
+    max-width: calc(100% - 20px);
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* * Dropdown Start */
+
+.unitypad-dropdown-wrap {
+    position: relative;
+    display: block;
+}
+
+.unitypad-dropdown-wrap .dropdown-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    flex-direction: column;
+    width: 100%;
+    z-index: 300;
+}
+
+.unitypad-dropdown-wrap {
+    position: relative;
+    display: block;
+}
+
+.unitypad-dropdown-wrap .dropdown-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    flex-direction: column;
+    width: 100%;
+    z-index: 300;
+}
+
+.open-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: var(--unitypad-border-radius);
+    padding: 0 17px 0 12px;
+    width: 100%;
+    background-color: hsla(0, 0%, 100%, .06);
+    transition: background-color 100ms ease-in-out;
+    text-decoration: none;
+    height: 50px;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+
+.open-btn .sort-icon-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.open-btn .arrow-icon {
+    margin-left: 25px;
+}
+
+.open-btn:hover {
+    background-color: var(--color-primar-very-darky);
+}
+
+.open-btn .sort-icon {
+    width: 20px;
+}
+
+.sort-title-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.unitypad-dropdown:hover .open-btn {
+    border-radius: var(--unitypad-border-radius) var(--unitypad-border-radius) 0px 0px;
+}
+
+.unitypad-dropdown:hover .dropdown-list {
+    display: flex;
+}
+
+.unitypad-dropdown .dropdown-list .sort-btn:last-child {
+    border-radius: 0px 0px var(--unitypad-border-radius) var(--unitypad-border-radius);
+}
+
+.unitypad-dropdown .sort-btn {
+    background-color: var(--unitypad-panel-background);
+    height: 50px;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+
+.unitypad-dropdown .sort-btn:hover {
+    background-color: var(--color-primary);
+    color: var(--unitypad-text-white);
+}
+
+
+.unitypad-dropdown .dropdown-list .sort-btn:hover {
+    color: var(--unitypad-text-white);
+}
+
+.unitypad-dropdown {
+    grid-column: auto/span 5;
+}
+
+.unitypad-dropdown .dropdown-btn {
+    width: 100%;
+}
+.dropdown-btn span {
+    color: var(--color-white);
+}
+.dropdown-list .sort-item {
+    border-top: 1px solid hsla(0, 0%, 100%, .1);
+}
+
+/* * Dropdown End */
+
+/* * Tools Start */
+.tools-wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    margin-bottom: 10px;
+}
+
+.search-wrap {
+    display: grid;
+    grid-template-columns: 30px auto;
+    align-items: center;
+    padding-left: 10px;
+    background-color: hsla(0, 0%, 100%, .06);
+    border-radius: var(--unitypad-border-radius);
+    height: 50px;
+    grid-column: auto/span 1;
+}
+
+.search-wrap .search-icon {
+    width: 20px;
+    pointer-events: none;
+}
+
+.search-wrap .search-input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    width: 100%;
+}
+
+/* * Active Markets Only*/
+.active-markets {
+    background: hsla(0, 0%, 100%, .06);
+    border-radius: var(--unitypad-border-radius);
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 24px;
+    grid-column: auto/span 5;
+}
+
+.checkbox {
+    position: relative;
+    width: 36px;
+    height: 20px;
+    background: var(--unitypad-panel-background);
+    border: 1px solid var(--unitypad-border-color);
+    border-radius: var(--unitypad-border-radius);
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.checkbox.active {
+    background: var(--color-primary-very-dark);
+    border: 1px solid var(--unitypad-border-color);
+}
+
+.checkbox-indicator {
+    width: 14px;
+    height: 14px;
+    box-shadow: 0 4px 5px -1px rgba(0, 0, 0, .08);
+    border-radius: var(--unitypad-border-radius);
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+    transition: all .3s ease;
+}
+
+.checkbox.active .checkbox-indicator {
+    left: calc(100% - 3px);
+    transform: translateY(-50%) translateX(-100%);
+}
+
+/* * Stat List */
+
+.stats-list-wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    grid-column: 1;
+    margin-top: 10px;
+}
+
+.stats-list-header {
+    display: none;
+    grid-template-columns: .5fr 1.5fr 1fr 1fr 1fr 1fr 180px;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+    font-size: 14px;
+    border-radius: var(--unitypad-border-radius);
+    background-color: var(--unitypad-panel-background-secondary);
+    color: hsla(0, 0%, 100%, .8);
+    text-transform: uppercase;
+}
+
+.stats-wrapper .markets-link {
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: var(--unitypad-panel-background);
+    /* background-image: linear-gradient(165deg, var(--unitypad-page-gray-brighter) 0%, #1a2a24 100%); */
+    line-height: 21px;
+    border-radius: var(--unitypad-border-radius);
+    padding: 10px;
+    height: auto;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    text-align: left;
+    box-shadow: 0 0 0 1px transparent;
+    transition: all .2s;
+}
+
+.stats-wrapper .markets-link span {
+    color: var(--unitypad-color-white);
+}
+
+.stats-wrapper .markets-link:hover {
+    background-color: var(--unitypad-panel-background-secondary);
+
+}
+
+.stats-wrapper .markets-link .links-wrap {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.stats-wrapper .markets-link .links-wrap .link-wrap {
+    text-decoration: none;
+    width: 84px;
+    height: 32px;
+    background: hsla(0, 0%, 100%, .1);
+    border-radius: var(--unitypad-border-radius);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stats-wrapper .stats-wrap {
+    display: grid;
+    grid-gap: 4px;
+    width: 100%;
+}
+
+.stats-wrap .chain-title {
+    display: block;
+    text-transform: uppercase;
+}
+
+.stats-wrap .chain-icon {
+    max-width: 26px;
+    width: 100%;
+    max-height: 26px;
+}
+
+.pool-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.pool-info .token-icon {
+    height: 32px;
+    width: 32px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+.pool-info .pool-description {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.pool-info .pool-new,
+.pool-info .pool-deprecated {
+    border-radius: var(--unitypad-border-radius);
+    font-size: 12px;
+    line-height: 18px;
+    padding: 0 10px;
+}
+
+.pool-info .pool-new {
+    width: max-content;
+    background: var(--color-primary);
+}
+
+.pool-info .pool-deprecated {
+    width: max-content;
+    background: #ff6600;
+
+}
+
+.stats-wrap .mobile-title {
+    display: block;
+    color: hsla(0, 0%, 100%, .6);
+    text-transform: uppercase;
+}
+
+/*? Breakpoints */
+
+
+@media (min-width: 768px) {
+    .unitypad-dropdown {
+        grid-column: auto/span 4;
+    }
+
+    .tools-wrap {
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .search-wrap {
+        grid-column: auto/span 4;
+    }
+
+    .active-markets {
+        grid-column: auto/span 4;
+    }
+}
+
+@media (min-width: 1024px) {
+    .stats-list-wrap {
+        grid-column: 1/5;
+        margin-top: 0;
+    }
+
+    /* Only visible above 1024px */
+    .stats-list-header {
+        display: grid;
+    }
+
+    .stats-wrapper .markets-link {
+        padding: 0 20px;
+        font-size: 16px;
+        border-radius: var(--unitypad-border-radius);
+        height: 70px;
+    }
+
+    .stats-wrap .chain-title {
+        display: none;
+    }
+
+    .stats-wrapper .stats-wrap {
+        grid-template-columns: .5fr 1.5fr 1fr 1fr 1fr 1fr 180px;
+        align-items: center;
+        grid-gap: 0;
+        height: 36px;
+    }
+
+    .pool-info {
+        margin-bottom: 0;
+    }
+
+    .pool-description {
+        height: 28px;
+    }
+
+    .stats-wrap .mobile-title {
+        display: none;
+    }
+
+    .active-markets {
+        grid-column: auto/span 4;
+    }
+}

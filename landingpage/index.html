@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--TODO Page title -->
+    <title>UnityPad</title>
+    <!--TODO Favico -->
+    <link rel="icon" type="image/x-icon" href="./assets/images/favico.ico">
+
+
+    <!--% BootStrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!--% AOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+        integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--% FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--% Style -->
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/hoverlight.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/app_components.css">
+</head>
+
+<body class="text-light position-relative overflow-x-none" id="page_root">
+    <nav class="navbar navbar-expand-lg unitypad-navbar fixed-top" data-aos="zoom-in">
+        <div class="container d-flex">
+            <a class="navbar-brand ps-0 ms-auto me-0" href="#">
+                <img class="navbar-logo" src="./assets/images/logo-navbar.png">
+            </a>
+            <button class="navbar-toggler  ps-3" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa fa-align-center" aria-hidden="true"></i>
+            </button>
+            <div class="collapse navbar-collapse gap-2" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://app.utrade.exchange/#/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://app.utrade.exchange/#/dashboard">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://app.utrade.exchange/#/earn">Earn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://app.utrade.exchange/#/buy">Buy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://app.utrade.exchange/#/referrals">Referrals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://app.utrade.exchange/#/ecosystem">Ecosystem</a>
+                    </li>
+                </ul>
+                <a class="launch-app-button hoverlight px-4" href="https://app.utrade.exchange/#/trade">
+                    Trade
+                </a>
+            </div>
+        </div>
+    </nav>
+    <canvas id="canvas" class="gradientCanvas"></canvas>
+    <div class="pg-bgr"></div>
+    <div class="position-relative" style="">
+        <!-- Homepage -->
+        <section id="homepage" style="display: none;">
+            <div class="app-homepage text-center min-vh-100 d-flex flex-column">
+                <!--     -->
+                <div class="my-auto d-flex flex-column min-vh-100 pt-md-5">
+                    <div class="my-auto">
+                        <div>
+                            <img src="./assets/images/decor1.png" alt="unitypad" class="logo mx-auto mb-3 mt-auto">
+                        </div>
+                        <a class="unitypad-button-main hoverlight mx-auto font-bold mb-3" href="https://app.utrade.exchange/#/trade">Launch Exchange</a>
+                    </div>
+                    <div class="my-auto">
+                        <div class="d-flex gap-5 flex-wrap justify-content-center partners-wrapper">
+                            <div class="app-section-card hoverlight py-lg-4">
+                                <svg class="app-section-card-decoration" width="60" height="150">
+                                    <rect x="0" y="0" width="15%" height="100%" fill="#4b1d1d" />
+                                    <rect x="20" y="0" width="30%" height="100%" fill="#791b1b" transform />
+                                </svg>
+                                <h4>Total Trading Volume</h4>
+                                <p class="name">$108.86</p>
+                            </div>
+                            <div class="app-section-card hoverlight py-lg-4">
+                                <svg class="app-section-card-decoration" width="60" height="150">
+                                    <rect x="0" y="0" width="15%" height="100%" fill="#4b1d1d" />
+                                    <rect x="20" y="0" width="30%" height="100%" fill="#791b1b" transform />
+                                </svg>
+                                <h4>Open Interest</h4>
+                                <p class="name">$103,647,441</p>
+                            </div>
+                            <div class="app-section-card hoverlight py-lg-4">
+                                <svg class="app-section-card-decoration" width="60" height="150">
+                                    <rect x="0" y="0" width="15%" height="100%" fill="#4b1d1d" />
+                                    <rect x="20" y="0" width="30%" height="100%" fill="#791b1b" transform />
+                                </svg>
+                                <h4>Total Users</h4>
+                                <p class="name">1</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- -->
+                <div class="app-part-section text-center d-flex" data-aos="zoom-in">
+                    <div class="mx-auto text-center">
+                        <div class="mb-5">
+                            <h1 class="mb-3 font-bold">Level Up Every Trade</h1>
+                        </div>
+                        <div class="app-square-cards-wrapper bordered d-flex flex-wrap gap-2justify-content-center">
+                            <div class="app-square-card hoverlight">
+                                <svg class="app-square-decoration" width="60" height="150">
+                                    <rect x="0" y="0" width="15%" height="100%" fill="#4b1d1d" />
+                                    <rect x="20" y="0" width="30%" height="100%" fill="#791b1b" transform />
+                                </svg>
+                                <img src="./assets/images/app/logo1.png" class="app-square-icon">
+                                <div class="content">
+                                    <h4 class="py-2">Zero Price Impact</h4>
+                                    <p>$100 or $1,000,000 position, the price impact will always be 0%</p>
+                                </div>
+                            </div>
+                            <div class="app-square-card hoverlight">
+                                <svg class="app-square-decoration" width="60" height="150">
+                                    <rect x="0" y="0" width="15%" height="100%" fill="#4b1d1d" />
+                                    <rect x="20" y="0" width="30%" height="100%" fill="#791b1b" transform />
+                                </svg>
+                                <img src="./assets/images/app/logo2.png" class="app-square-icon">
+                                <div class="content">
+                                    <h4 class="py-2">Up to 100x leverage</h4>
+                                    <p>Unleash full trading power with up to 100x leverage</p>
+                                </div>
+                            </div>
+                            <div class="app-square-card hoverlight">
+                                <svg class="app-square-decoration" width="60" height="150">
+                                    <rect x="0" y="0" width="15%" height="100%" fill="#4b1d1d" />
+                                    <rect x="20" y="0" width="30%" height="100%" fill="#791b1b" transform />
+                                </svg>
+                                <img src="./assets/images/app/metamask.png" class="app-square-icon">
+                                <div class="content">
+                                    <h4 class="py-2">Self-Custody</h4>
+                                    <p>Trade directly via your Web3 wallet Your key, Your assets</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-square-cards-wrapper bordered d-flex flex-wrap gap-2justify-content-center">
+                            <div class="app-square-card hoverlight">
+                                <svg class="app-square-decoration" width="60" height="150">
+                                    <rect x="0" y="0" width="15%" height="100%" fill="#4b1d1d" />
+                                    <rect x="20" y="0" width="30%" height="100%" fill="#791b1b" transform />
+                                </svg>
+                                <img src="./assets/images/app/liguidity.png" class="app-square-icon">
+                                <div class="content">
+                                    <h4 class="py-2">Aggregated Liquidity</h4>
+                                    <p>UnityChain routes positions to suited liquidity sources to support needed sizes
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="app-square-card hoverlight">
+                                <svg class="app-square-decoration" width="60" height="150">
+                                    <rect x="0" y="0" width="15%" height="100%" fill="#4b1d1d" />
+                                    <rect x="20" y="0" width="30%" height="100%" fill="#791b1b" transform />
+                                </svg>
+                                <img src="./assets/images/app/multichain.png" class="app-square-icon">
+                                <div class="content">
+                                    <h4 class="py-2">Multi-Chain Native</h4>
+                                    <p>Trade on any deployed networks with the same unified liquidity depth</p>
+                                </div>
+                            </div>
+                            <div class="app-square-card hoverlight">
+                                <svg class="app-square-decoration" width="60" height="150">
+                                    <rect x="0" y="0" width="15%" height="100%" fill="#4b1d1d" />
+                                    <rect x="20" y="0" width="30%" height="100%" fill="#791b1b" transform />
+                                </svg>
+                                <img src="./assets/images/app/fast.png" class="app-square-icon">
+                                <div class="content">
+                                    <h4 class="py-2">Lightning Fast</h4>
+                                    <p>Experience optimized order execution speed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Start Trading -->
+                <div class="app-part-section text-center" data-aos="zoom-in">
+                    <div class="m-auto w-100">
+                        <h2 class="font-bold">Start Trading</h2>
+                        <p>We are continously adding new trading networks and markets</p>
+                        <div class="d-flex chain-card-wrapper flex-wrap gap-2 mx-auto justify-content-center">
+                            <div class="chain-card hoverlight">
+                                <img src="assets/images/app/icon_polygon.png">
+                                <p>Polygon Chain</p>
+                                <a href="https://app.utrade.exchange/#/trade">Launch Exchange</a>
+                            </div>
+                            <div class="chain-card  hoverlight">
+                                <img src="assets/images/app/icon_bsc.png">
+                                <p>Binance Smart Chain</p>
+                                <a href="https://app.utrade.exchange/#/trade">Launch Exchange</a>
+                            </div>
+                            <div class="chain-card  hoverlight">
+                                <img src="assets/images/app/icon_op.png">
+                                <p>Optimism Chain</p>
+                                <a href="https://app.utrade.exchange/#/trade">Launch Exchange</a>
+                            </div>
+                            <div class="chain-card  hoverlight">
+                                <img src="assets/images/app/icon_arbitrum.png">
+                                <p>Arbitrum Chain</p>
+                                <a href="https://app.utrade.exchange/#/trade">Launch Exchange</a>
+                            </div>
+                            <div class="chain-card  hoverlight">
+                                <img src="assets/images/app/icon_zksync.png">
+                                <p>zkSync Chain</p>
+                                <a href="https://app.utrade.exchange/#/trade">Launch Exchange</a>
+                            </div>
+                            <div class="chain-card  hoverlight">
+                                <img src="assets/images/app/icon_fantom.png">
+                                <p>Fantom Chain</p>
+                                <a href="https://app.utrade.exchange/#/trade">Launch Exchange</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="app-part-section text-center" data-aos="zoom-in">
+                    <div class="m-auto w-100">
+                        <h2 class="font-bold">Security & Audits</h2>
+                        <p>Our smart contracts have been unit tested and have undergone multiple independent audits from
+                            Zokyo.</p>
+                        <img src="./assets/images/app/security.png" style="max-width: 100px; max-height: 100px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard -->
+        <section id="dashboard" style="display: none;">
+            <div class="app-part-section text-center" data-aos="zoom-in">
+                <div class="mb-5">
+                    <h2 class="font-bold font-40">Statistics</h2>
+                    <p>Total Stats start from 1/1 2023.</p>
+                </div>
+                <div class="container grid">
+                    <div class="row justify-content-center gy-5">
+                        <div class="col-lg-4 text-center d-flex flex-column gap-1  dashboard-column">
+                            <h3 class="font-bold">Overview</h3>
+                            <svg class="w-100" width="150" height="20">
+                                <rect x="0" y="0" width="100%" height="20%" fill="#4b1d1d" />
+                                <rect x="10%" y="50%" width="80%" height="10%" fill="#321414" />
+                            </svg>
+                            <div class="dashboard-card hoverlight">
+                                <p>AUM</p>
+                                <p>$35</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>$ULP Pool</p>
+                                <p>$35</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>24h Volume</p>
+                                <p>$9.98</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Long Positions</p>
+                                <p>$0</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Short Positions</p>
+                                <p>$0</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Fees since 15 Mar 2023</p>
+                                <p>$...</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 text-center d-flex flex-column gap-1  dashboard-column">
+                            <h3 class="font-bold">Total Stats</h3>
+                            <svg class="w-100" width="150" height="20">
+                                <rect x="0" y="0" width="100%" height="20%" fill="#4b1d1d" />
+                                <rect x="10%" y="50%" width="80%" height="10%" fill="#321414" />
+                            </svg>
+                            <div class="dashboard-card hoverlight">
+                                <p>Total Fees</p>
+                                <p>$0.08</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Total Volume</p>
+                                <p>$27.8</p>
+                            </div>
+                            <div class="dashboard-card empty">
+                            </div>
+                            <div class="dashboard-card empty">
+                            </div>
+                            <div class="dashboard-card empty">
+                            </div>
+                            <div class="dashboard-card empty">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="app-part-section text-center" data-aos="zoom-in">
+                <div class="mb-5">
+                    <h2 class="font-bold font-40">Tokens</h2>
+                    <p>Platform and $ULP index tokens</p>
+                </div>
+                <div class="container grid">
+                    <div class="row justify-content-center gy-5">
+                        <div class="col-lg-4 text-center d-flex flex-column gap-1  dashboard-column">
+                            <div class="d-flex">
+                                <h3 class="font-bold my-auto">$UNITY </h3>
+                                <button class="unitypad-button-main hoverlight ms-auto py-0 font-bold" href="#">Open in
+                                    Explorer</button>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Price</p>
+                                <p>$0.32</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Supply</p>
+                                <p>200 $UNITY</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Total Staked</p>
+                                <p>$0</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>MarketCap</p>
+                                <p>$64</p>
+                            </div>
+                            <div class="dashboard-card empty">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 text-center d-flex flex-column gap-1  dashboard-column">
+                            <div class="d-flex">
+                                <h3 class="font-bold my-auto">$UNITY </h3>
+                                <button class="unitypad-button-main hoverlight ms-auto py-0 font-bold" href="#">Open in
+                                    Explorer</button>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Price</p>
+                                <p>$1.000</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Supply</p>
+                                <p>0 $ULP</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Total Staked</p>
+                                <p>$0</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>MarketCap</p>
+                                <p>$0</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Stablecoin Percentage</p>
+                                <p>0 %</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="app-part-section text-center" data-aos="zoom-in">
+                <div class="mb-5">
+                    <h2 class="font-bold font-40">Statistics</h2>
+                    <p>Total Stats start from 1/1 2023.</p>
+                </div>
+                <div class="container-fluid">
+                    <div class="list-app-wrapper text-center">
+                        <div class="stats-wrapper text-start">
+                            <div class="tools-wrap">
+                                <div class="search-wrap">
+                                    <img src="./assets/icons/search.svg" alt="search" class="search-icon">
+                                    <input type="text" placeholder="search" class="search-input"></input>
+                                </div>
+                                <div class="unitypad-dropdown-wrap unitypad-dropdown">
+                                    <div class="dropdown-btn">
+                                        <a class="sort-btn open-btn">
+                                            <span class="sort-title-wrap">
+                                                <button class="sort-icon-wrap">
+                                                    <img src="./assets/icons/filter.svg" alt="filter" class="sort-icon">
+                                                </button>
+                                                <span>Sorted by $$$ left</span>
+                                            </span>
+                                            <img src="/assets/icons/arrowdown.svg" alt="filter">
+                                        </a>
+                                    </div>
+                                    <div class="dropdown-list">
+                                        <button class="sort-btn sort-item">TVL</button>
+                                        <button class="sort-btn sort-item">Title </button>
+                                        <button class="sort-btn sort-item">Interest </button>
+                                        <button class="sort-btn sort-item">Fee </button>
+                                    </div>
+                                </div>
+                                <div class="active-markets">
+                                    active markets only
+                                    <div class="checkbox active">
+                                        <div class="checkbox-indicator"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="stats-list-wrap">
+                                <div class="stats-list-header">
+                                    <div>CHAIN</div>
+                                    <div>COLLATERAL</div>
+                                    <div>TOTAL $$$ BORROWED</div>
+                                    <div>TVL</div>
+                                    <div>$$$ LEFT TO BORROW</div>
+                                    <div>INTEREST</div>
+                                </div>
+                                <a class="markets-link hoverlight">
+                                    <div class="stats-wrap">
+                                        <div>
+                                            <div class="chain-title">Chain</div>
+                                            <img src="./assets/images/decor1.png" alt="" class="chain-icon">
+                                        </div>
+                                        <div class="pool-info">
+                                            <img src="./assets/icons/mglp.png" alt="" style="height: 32px;width: 32px;"
+                                                class="token-icon">
+                                            <div class="pool-description">
+                                                <span>MagicGLP</span>
+                                                <span class="pool-new">NEW</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span class="mobile-title">TOTAL $$$ BORROWED</span>
+                                            <span sx-value sx-start="0" sx-target="10.29" sx-duration="1500"
+                                                sx-store-state="0" sx-fixed="2" sx-format="0" sx-suffix="m">0</span>
+                                        </div>
+                                        <div>
+                                            <span class="mobile-title">TVL</span>
+                                            <span>
+                                                $ <span sx-value sx-start="0" sx-target="18.24" sx-duration="1500"
+                                                    sx-store-state="0" sx-fixed="2" sx-suffix="M">0</span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span class="mobile-title">$$$ LEFT TO BORROW</span>
+                                            <span sx-value sx-start="0" sx-target="12.23" sx-duration="1500"
+                                                sx-store-state="0" sx-fixed="2" sx-suffix="M">0</span>
+                                        </div>
+                                        <div>
+                                            <span class="mobile-title">Interest</span>
+                                            <span>7%</span>
+                                        </div>
+                                        <div class="links-wrap">
+                                            <div class="link-wrap">
+                                                <span>Borrow</span>
+                                            </div>
+                                            <div class="link-wrap">
+                                                <span>Borrow</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="markets-link hoverlight">
+                                    <div class="stats-wrap">
+                                        <div>
+                                            <div class="chain-title">Chain</div>
+                                            <img src="./assets/images/decor1.png" alt="" class="chain-icon">
+                                        </div>
+                                        <div class="pool-info">
+                                            <img src="./assets/icons/weth.png" alt="" style="height: 32px;width: 32px;"
+                                                class="token-icon">
+                                            <div class="pool-description">
+                                                <span>WETH</span>
+                                                <span class="pool-new">NEW</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span class="mobile-title">TOTAL $$$ BORROWED</span>
+                                            <span>0</span>
+                                        </div>
+                                        <div>
+                                            <span class="mobile-title">TVL</span>
+                                            <span>
+                                                $ <span>0</span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span class="mobile-title">$$$ LEFT TO BORROW</span>
+                                            <span>0</span>
+                                        </div>
+                                        <div>
+                                            <span class="mobile-title">Interest</span>
+                                            <span></span>
+                                        </div>
+                                        <div class="links-wrap">
+                                            <div class="link-wrap">
+                                                <span>Borrow</span>
+                                            </div>
+                                            <div class="link-wrap">
+                                                <span>Borrow</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="markets-link hoverlight">
+                                    <div class="stats-wrap">
+                                        <div>
+                                            <div class="chain-title">Chain</div>
+                                            <img src="./assets/images/decor1.png" alt="" class="chain-icon">
+                                        </div>
+                                        <div class="pool-info">
+                                            <img src="./assets/icons/glp.png" alt="" style="height: 32px;width: 32px;"
+                                                class="token-icon">
+                                            <div class="pool-description">
+                                                <span>GLP</span>
+                                                <span class="pool-new">NEW</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span class="mobile-title">TOTAL $$$ BORROWED</span>
+                                            <span>0</span>
+                                        </div>
+                                        <div>
+                                            <span class="mobile-title">TVL</span>
+                                            <span>$ 0</span>
+                                        </div>
+                                        <div>
+                                            <span class="mobile-title">$$$ LEFT TO BORROW</span>
+                                            <span>0</span>
+                                        </div>
+                                        <div>
+                                            <span class="mobile-title">Interest</span>
+                                            <span></span>
+                                        </div>
+                                        <div class="links-wrap">
+                                            <div class="link-wrap">
+                                                <span>Borrow</span>
+                                            </div>
+                                            <div class="link-wrap">
+                                                <span>Borrow</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="markets-link hoverlight">
+                                    <div class="stats-wrap">
+                                        <div>
+                                            <div class="chain-title">Chain</div>
+                                            <img src="./assets/images/decor1.png" alt="" class="chain-icon">
+                                        </div>
+                                        <div class="pool-info">
+                                            <img src="./assets/icons/mglp.png" alt="" style="height: 32px;width: 32px;"
+                                                class="token-icon">
+                                            <div class="pool-description">
+                                                <span>MagicGLP</span>
+                                                <span class="pool-new">NEW</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span class="mobile-title">TOTAL $$$ BORROWED</span>
+                                            <span>0</span>
+                                        </div>
+                                        <div>
+                                            <span class="mobile-title">TVL</span>
+                                            <span>
+                                                $ <span>0</span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span class="mobile-title">$$$ LEFT TO BORROW</span>
+                                            <span>0</span>
+                                        </div>
+                                        <div>
+                                            <span class="mobile-title">Interest</span>
+                                            <span></span>
+                                        </div>
+                                        <div class="links-wrap">
+                                            <div class="link-wrap">
+                                                <span>Borrow</span>
+                                            </div>
+                                            <div class="link-wrap">
+                                                <span>Borrow</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="markets-link hoverlight">
+                                    <div class="stats-wrap">
+                                        <div>
+                                            <div class="chain-title">Chain</div>
+                                            <img src="./assets/images/decor1.png" alt="" class="chain-icon">
+                                        </div>
+                                        <div class="pool-info">
+                                            <img src="./assets/icons/weth.png" alt="" style="height: 32px;width: 32px;"
+                                                class="token-icon">
+                                            <div class="pool-description">
+                                                <span>WETH</span>
+                                                <span class="pool-new">NEW</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span class="mobile-title">TOTAL $$$ BORROWED</span>
+                                            <span sx-value sx-start="0" sx-target="1.62" sx-duration="1500"
+                                                sx-store-state="0" sx-fixed="2" sx-suffix="m">0</span>
+                                        </div>
+                                        <div>
+                                            <span class="mobile-title">TVL</span>
+                                            <span>
+                                                $ <span sx-value sx-start="0" sx-target="4.17" sx-duration="1500"
+                                                    sx-store-state="0" sx-fixed="2" sx-suffix="m">0</span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span class="mobile-title">$$$ LEFT TO BORROW</span>
+                                            <span sx-value sx-start="0" sx-target="296.82" sx-duration="1500"
+                                                sx-store-state="0" sx-fixed="2" sx-suffix="k">0</span>
+                                        </div>
+                                        <div>
+                                            <span class="mobile-title">Interest</span>
+                                            <span sx-value sx-start="0" sx-target="0.5" sx-duration="500"
+                                                sx-store-state="0" sx-fixed="1" sx-format="0" sx-suffix="%"></span>
+                                        </div>
+                                        <div class="links-wrap">
+                                            <div class="link-wrap">
+                                                <span>Borrow</span>
+                                            </div>
+                                            <div class="link-wrap">
+                                                <span>Borrow</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="markets-link hoverlight">
+                                    <div class="stats-wrap">
+                                        <div>
+                                            <div class="chain-title">Chain</div>
+                                            <img src="./assets/images/decor1.png" alt="" class="chain-icon">
+                                        </div>
+                                        <div class="pool-info">
+                                            <img src="./assets/icons/glp.png" alt="" style="height: 32px;width: 32px;"
+                                                class="token-icon">
+                                            <div class="pool-description">
+                                                <span>GLP</span>
+                                                <span class="pool-deprecated">DEPRECATED</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span class="mobile-title">TOTAL $$$ BORROWED</span>
+                                            <span sx-value sx-start="0" sx-target="53.89" sx-duration="1500"
+                                                sx-store-state="0" sx-fixed="2" sx-suffix="k">0</span>
+                                        </div>
+                                        <div>
+                                            <span class="mobile-title">TVL</span>
+                                            <span>
+                                                $ <span sx-value sx-start="0" sx-target="117.66" sx-duration="1500"
+                                                    sx-store-state="0" sx-fixed="1" sx-suffix="k">0</span>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <span class="mobile-title">$$$ LEFT TO BORROW</span>
+                                            <span sx-value sx-start="0" sx-target="0" sx-duration="1" sx-store-state="0"
+                                                sx-fixed="2" sx-suffix="m">0</span>
+                                        </div>
+                                        <div>
+                                            <span class="mobile-title">Interest</span>
+                                            <span sx-value sx-start="0" sx-target="0" sx-duration="1500"
+                                                sx-store-state="0" sx-fixed="0" sx-suffix="%"></span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buy page -->
+        <section id="buy" style="display: none;">
+            <div class="app-part-section text-center d-flex justify-content-center flex-column" data-aos="zoom-in">
+                <div class="mb-5  my-auto">
+                    <h2 class="font-bold font-40 px-2">Two tokens create our ecosystem</h2>
+                </div>
+                <div class="container-fluid px-lg-5 grid" style="min-height: 50vh;">
+                    <div class="row justify-content-center gy-5">
+
+                        <div class="col-md-6 col-lg-4 text-center d-flex flex-column gap-1 flex-wrap dashboard-column">
+                            <div class="d-flex dashboard-card-header hoverlight">
+                                <svg class="decoration" width="60" height="150">
+                                    <rect x="0" y="0" width="15%" height="100%" fill="#4b1d1d" />
+                                    <rect x="20" y="0" width="30%" height="100%" fill="#791b1b" transform />
+                                </svg>
+                                <img src="./assets/images/decor1.png" class="my-auto">
+                                <div class="content d-flex flex-column px-2">
+                                    <h4 class="title mb-auto">$UNITY</h4>
+                                    <p class="text">$UNITY is the utility and governance token. Accrues 30% of the
+                                        platform's generated fees. </p>
+                                </div>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Bsc APR: <span class="color-white">0.00%</span></p>
+                                <a href="#">Buy on BSC</a>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Polygon APR: <span class="color-white">44,123.88%</span></p>
+                                <a href="#">Buy on Polygon</a>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Optimism APR: <span class="color-white">...%</span></p>
+                                <a href="#">Buy on Optimism</a>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Arbitrum APR: <span class="color-white">0.00%</span></p>
+                                <a href="#">Buy on Arbitrum</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 text-center d-flex flex-column gap-1 flex-wrap dashboard-column">
+                            <div class="d-flex dashboard-card-header hoverlight">
+                                <svg class="decoration" width="60" height="150">
+                                    <rect x="0" y="0" width="15%" height="100%" fill="#2d2d2d" />
+                                    <rect x="20" y="0" width="30%" height="100%" fill="#9a9a9a" transform />
+                                </svg>
+                                <img src="./assets/images/decor1.png" style="filter: saturate(0)" class="my-auto">
+                                <div class="content d-flex flex-column px-2">
+                                    <h4 class="title mb-auto">$ULP</h4>
+                                    <p class="text">$ULP is the liquidity provider token. Accrues 70% of the platform's
+                                        generated fees.</p>
+                                </div>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p class="color-grey">Bsc APR: <span class="color-white">0.00%</span></p>
+                                <a href="#">Buy on BSC</a>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p class="color-grey">Polygon APR: <span class="color-white">44,123.88%</span></p>
+                                <a href="#">Buy on Polygon</a>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p class="color-grey">Optimism APR: <span class="color-white">...%</span></p>
+                                <a href="#">Buy on Optimism</a>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p class="color-grey">Arbitrum APR: <span class="color-white">0.00%</span></p>
+                                <a href="#">Buy on Arbitrum</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Referals page -->
+        <section id="referrals" style="display: none;">
+            <div class="app-part-section container text-center d-flex justify-content-center flex-column"
+                data-aos="zoom-in" style="min-height: 50vh; margin-bottom: 235px;">
+                <h2 class="font-bold font-40 px-2 mb-0">Referrals</h2>
+                <p style="max-width: 600px;" class="mx-auto">Get fee discounts and earn rebates through the $UNITY
+                    referral program. For more information, please read the referral program details.</p>
+
+                <div class="mt-5">
+                    <div class="d-flex flex-wrap justify-content-center gap-2">
+                        <button class="unitypad-button-main hoverlight font-bold" style="min-width: 120px"
+                            href="#">Traders</button>
+                        <button class="unitypad-button-main hoverlight font-bold" style="min-width: 120px"
+                            href="#">Affiliates</button>
+                    </div>
+
+                    <div class="app-referral-card hoverlight py-lg-4 mx-auto mt-2" style="max-width: 522px">
+                        <svg class="app-referral-card-decoration" width="60" height="150">
+                            <rect x="0" y="0" width="15%" height="100%" fill="#4b1d1d" />
+                            <rect x="20" y="0" width="30%" height="100%" fill="#791b1b" transform />
+                        </svg>
+                        <h4 class="pt-2">Enter Referral Code</h4>
+                        <p class="name">Please input a referral code to benefit from fee discounts.</p>
+                        <button class="unitypad-button-main hoverlight font-bold mx-auto mt-4 z-2" href="#">Connect
+                            Wallet</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Ecosystem page -->
+        <section id="ecosystem" style="display: none;">
+            <div class="app-part-section container text-center d-flex justify-content-center flex-column"
+                data-aos="zoom-in" style="min-height: 50vh; margin-bottom: 235px;">
+                <h2 class="font-bold font-40 px-2 mb-0">Telegram Groups</h2>
+                <p style="max-width: 600px;" class="mx-auto">Community-led Telegram groups</p>
+
+                <div class="mt-5 d-flex flex-wrap gap-2 justify-content-center">
+                    <div class="app-section-card hoverlight ecosystem" style="min-width: 240px;">
+                        <svg class="app-section-card-decoration" width="60" height="150">
+                            <rect x="0" y="0" width="15%" height="100%" fill="#4b1d1d" />
+                            <rect x="20" y="0" width="30%" height="100%" fill="#791b1b" transform />
+                        </svg>
+                        <h4 class="pt-2">$UNITY</h4>
+                        <p class="name">Telegram Group.</p>
+                        <button class="unitypad-button-main hoverlight font-bold mx-auto mt-4 z-2 px-5 py-1" href="#"> <i
+                                class="fab fa-telegram" aria-hidden="true"></i> JOIN</button>
+                    </div>
+                    <div class="app-section-card hoverlight ecosystem" style="min-width: 280px;">
+                        <svg class="app-section-card-decoration" width="60" height="150">
+                            <rect x="0" y="0" width="15%" height="100%" fill="#4b1d1d" />
+                            <rect x="20" y="0" width="30%" height="100%" fill="#791b1b" transform />
+                        </svg>
+                        <h4 class="pt-2">$UNITY Trading Chat</h4>
+                        <p class="name">ßUNITY Community Discussion.</p>
+                        <button class="unitypad-button-main hoverlight font-bold mx-auto mt-4 z-2 px-5 py-1" href="#"> <i
+                                class="fab fa-telegram" aria-hidden="true"></i> JOIN</button>
+                    </div>
+                    <div class="app-section-card hoverlight ecosystem" style="min-width: 280p;">
+                        <svg class="app-section-card-decoration" width="60" height="150">
+                            <rect x="0" y="0" width="15%" height="100%" fill="#4b1d1d" />
+                            <rect x="20" y="0" width="30%" height="100%" fill="#791b1b" transform />
+                        </svg>
+                        <h4 class="pt-2">DAO</h4>
+                        <p class="name">Telegram DAO Group.</p>
+                        <button class="unitypad-button-main hoverlight font-bold mx-auto mt-4 z-2 px-5 py-1" href="#"> <i
+                                class="fab fa-telegram" aria-hidden="true"></i> JOIN</button>
+                    </div>
+                    <div class="app-section-card hoverlight ecosystem" style="min-width: 280px;">
+                        <svg class="app-section-card-decoration" width="60" height="150">
+                            <rect x="0" y="0" width="15%" height="100%" fill="#4b1d1d" />
+                            <rect x="20" y="0" width="30%" height="100%" fill="#791b1b" transform />
+                        </svg>
+                        <h4 class="pt-2">Announcements</h4>
+                        <p class="name">Telegram Announcements Group.</p>
+                        <button class="unitypad-button-main hoverlight font-bold mx-auto mt-4 z-2 px-5 py-1" href="#"> <i
+                                class="fab fa-telegram" aria-hidden="true"></i> JOIN</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Earn page -->
+        <section id="earn" style="display: none;">
+            <div class="app-part-section text-center" data-aos="zoom-in">
+                <div class="mb-5">
+                    <h2 class="font-bold font-40">Earn</h2>
+                    <p>Stake $UNITY and $ULP to earn rewards</p>
+                </div>
+                <div class="container-fluid px-lg-5 grid">
+                    <div class="row justify-content-center gy-5">
+
+                        <div
+                            class="col-md-6 col-lg-4 col-xxl-3 text-center d-flex flex-column gap-1 flex-wrap dashboard-column">
+                            <div class="d-flex">
+                                <div class="d-flex justify-content-between flex-wrap w-100">
+                                    <h3 class="font-bold my-auto app-section-title">$UNITY</h3>
+                                    <button class="unitypad-button-main hoverlight my-auto py-0 px-4 font-bold"
+                                        href="#">Buy $UNITY</button>
+                                </div>
+                            </div>
+                            <svg class="w-100" width="150" height="20">
+                                <rect x="0" y="0" width="100%" height="20%" fill="#4b1d1d" />
+                                <rect x="10%" y="50%" width="80%" height="10%" fill="#321414" />
+                            </svg>
+                            <div class="dashboard-card hoverlight">
+                                <p>Price</p>
+                                <p>$0.32</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Wallet</p>
+                                <p>...$UNITY ($...)</p>
+                            </div>
+                            <div class="dashboard-card mt-3">
+                                <p>APR</p>
+                                <p>...%</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Rewards</p>
+                                <p>$...</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Multiplier Points APR</p>
+                                <p>100%</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Boost Percentage</p>
+                                <p>...%</p>
+                            </div>
+                            <div class="dashboard-card mt-3">
+                                <p>Total Staked</p>
+                                <p>0 $UNITY ($...)</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Total Supply</p>
+                                <p>6,500,200 $UNITY ($3,427,009)</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="col-md-6 col-lg-4  col-xxl-3 text-center d-flex flex-column gap-1 flex-wrap dashboard-column">
+                            <div class="d-flex">
+                                <div class="d-flex justify-content-between flex-wrap w-100">
+                                    <h3 class="font-bold my-auto app-section-title">Total Rewards</h3>
+                                    <button class="unitypad-button-main hoverlight my-auto py-0 font-bold  px-4"
+                                        href="#">Connect
+                                        Wallet</button>
+                                </div>
+                            </div>
+                            <svg class="w-100" width="150" height="20">
+                                <rect x="0" y="0" width="100%" height="20%" fill="#4b1d1d" />
+                                <rect x="10%" y="50%" width="80%" height="10%" fill="#321414" />
+                            </svg>
+                            <div class="dashboard-card hoverlight">
+                                <p>MATIC (WMATIC)</p>
+                                <p>...($...)</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>$UNITY</p>
+                                <p>$27.2</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Escrowed $UNITY</p>
+                                <p>$0.08</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>MMultiplier Points</p>
+                                <p>...</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Staked Multiplier Points</p>
+                                <p>...</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Total Volume</p>
+                                <p>$...</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="col-md-6 col-lg-4  col-xxl-3 text-center d-flex flex-column gap-1 flex-wrap dashboard-column">
+                            <div class="d-flex flex-wrap justify-content-between">
+                                <h3 class="font-bold my-auto app-section-title">$ULP(Polygon)</h3>
+                                <div class="d-flex flex-wrap">
+                                    <button class="unitypad-button-main hoverlight py-0 font-bold" href="#">Buy
+                                        $PULP</button>
+                                    <button class="unitypad-button-main hoverlight py-0 font-bold" href="#">Sell
+                                        $PULP</button>
+                                </div>
+                            </div>
+                            <svg class="w-100" width="150" height="20">
+                                <rect x="0" y="0" width="100%" height="20%" fill="#4b1d1d" />
+                                <rect x="10%" y="50%" width="80%" height="10%" fill="#321414" />
+                            </svg>
+                            <div class="dashboard-card hoverlight">
+                                <p>Price</p>
+                                <p>$...</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Wallet</p>
+                                <p>...$ULP($...)</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Staked</p>
+                                <p>...$ULP($...)</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>APR</p>
+                                <p>...%</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Rewards</p>
+                                <p>$...</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Total Staked</p>
+                                <p>...$ULP($...)</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Total Supply</p>
+                                <p>...$ULP($...)</p>
+                            </div>
+                        </div>
+                        <div
+                            class="col-md-6 col-lg-4  col-xxl-3 text-center d-flex flex-column gap-1 flex-wrap dashboard-column">
+                            <div class="d-flex">
+                                <div class="d-flex justify-content-between flex-wrap w-100">
+                                    <h3 class="font-bold my-auto app-section-title">Escrowed $UNITY</h3>
+                                    <button class="unitypad-button-main hoverlight my-auto py-0 font-bold  px-4"
+                                        href="#">Connect
+                                        Wallet</button>
+                                </div>
+                            </div>
+                            <svg class="w-100" width="150" height="20">
+                                <rect x="0" y="0" width="100%" height="20%" fill="#4b1d1d" />
+                                <rect x="10%" y="50%" width="80%" height="10%" fill="#321414" />
+                            </svg>
+                            <div class="dashboard-card hoverlight">
+                                <p>Price</p>
+                                <p>$0.52</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Wallet</p>
+                                <p>...$esUNITY($...)</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Staked</p>
+                                <p>...$esUNITY($...)</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>APR</p>
+                                <p>...%</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Rewards</p>
+                                <p>$...</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Total Staked</p>
+                                <p>...$esUNITY($...)</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Total Supply</p>
+                                <p>3,046,284 esUNITY ($1,583,199)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-part-section text-center" data-aos="zoom-in">
+                <div class="mb-5">
+                    <h2 class="font-bold font-40">Vest</h2>
+                    <p>Convert esUNITY tokens to $UNITY tokens.<br>Please read the <span>vesting details</span>
+                        before using the vaults.</p>
+                </div>
+                <div class="container-fluid px-lg-5 grid">
+                    <div class="row justify-content-center gy-5">
+
+                        <div class="col-md-6 col-lg-3 text-center d-flex flex-column gap-1 flex-wrap dashboard-column">
+                            <div class="d-flex">
+                                <div class="d-flex justify-content-between flex-wrap w-100">
+                                    <h3 class="font-bold my-auto app-section-title">$UNITY Vault</h3>
+                                    <button class="unitypad-button-main hoverlight my-auto py-0 font-bold" href="#">Connect
+                                        Wallet</button>
+                                </div>
+                            </div>
+                            <svg class="w-100" width="150" height="20">
+                                <rect x="0" y="0" width="100%" height="20%" fill="#4b1d1d" />
+                                <rect x="10%" y="50%" width="80%" height="10%" fill="#321414" />
+                            </svg>
+                            <div class="dashboard-card hoverlight">
+                                <p>Staked Tokens</p>
+                                <p>...</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Reserved for Vesting</p>
+                                <p>0.00/...</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Vesting Status</p>
+                                <p>0.0000/0.0000</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Cla.imable</p>
+                                <p>0.000 $UNITY</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3 text-center d-flex flex-column gap-1 flex-wrap dashboard-column">
+                            <div class="d-flex">
+                                <div class="d-flex justify-content-between flex-wrap w-100">
+                                    <h3 class="font-bold my-auto app-section-title">$ULP Vault</h3>
+                                    <button class="unitypad-button-main hoverlight my-auto py-0 font-bold" href="#">Connect
+                                        Wallet</button>
+                                </div>
+                            </div>
+                            <svg class="w-100" width="150" height="20">
+                                <rect x="0" y="0" width="100%" height="20%" fill="#4b1d1d" />
+                                <rect x="10%" y="50%" width="80%" height="10%" fill="#321414" />
+                            </svg>
+                            <div class="dashboard-card hoverlight">
+                                <p>Staked Tokens</p>
+                                <p>..$ULP.</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Reserved for Vesting</p>
+                                <p>0.00/...</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Vesting Status</p>
+                                <p>0.0000/0.0000</p>
+                            </div>
+                            <div class="dashboard-card hoverlight">
+                                <p>Cla.imable</p>
+                                <p>0.000 $UNITY</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="404_page" style="display: none;">
+            <div class="app-part-section text-center" data-aos="zoom-in">
+                <div class="app-404_page text-center min-vh-100 d-flex flex-column">
+                    <h2>404 page</h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <section id="page_bottom" class="mt-5 pb-2">
+            <div class="d-flex justify-content-center gap-2 my-2">
+                <a href="https://app.utrade.exchange/"><img src="./assets/images/logo_white.png" alt="unitypad" class="footer-logo"></a>
+                <a href="https://twitter.com/unitychain_" target="_blank"><img src="./assets/images/icons/twitter.png" alt="twitter" class="footer-icon"></a>
+                <a href="https://t.me/UnityChain_Official"><img src="./assets/images/icons/telegram.png" alt="telegram" class="footer-icon"></a>
+                <a href="https://app.utrade.exchange/static/media/ic_medium.7bd073bf.svg"><img src="./assets/images/icons/m.png" alt="m" class="footer-icon"></a>
+            </div>
+            <div class="d-flex justify-content-center gap-2">
+                <div class="footer-icon-alt">
+                    <p class="footer-text">Powered by</p>
+                </div>
+                <a href="#" class="footer-icon-alt"><img src="./assets/images/icons/polygon.png" alt="twitter"></a>
+                <a href="#" class="footer-icon-alt"><img src="./assets/images/icons/bsc.png" alt="telegram"></a>
+                <a href="#" class="footer-icon-alt"><img src="./assets/images/icons/what.png" alt="what"></a>
+                <a href="#" class="footer-icon-alt"><img src="./assets/images/icons/fantom.png" alt="fantom"></a>
+                <a href="#" class="footer-icon-alt"><img src="./assets/images/icons/op.png" alt="op"></a>
+            </div>
+            <div class="d-flex justify-content-center gap-2">
+                <!--  -->
+            </div>
+        </section>
+    </div>
+</body>
+
+<footer>
+    <!--% jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <!--% BootStrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
+    <script src="./js/pageNavigation.js"></script>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/gradientLines.js"></script>
+    <script src="./js/hoverlight.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+        integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        // AOS INIT
+        AOS.init();
+    </script>
+</footer>
+
+</html>

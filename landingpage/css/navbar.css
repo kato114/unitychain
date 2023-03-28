@@ -1,0 +1,76 @@
+.unitypad-navbar {
+    min-height: var(--unitypad-navbar-height);
+    background-color: var(--unitypad-navbar-background);
+    font-family: var(--unitypad-font-main-bold);
+}
+
+.unitypad-navbar .navbar-toggler {
+    border: unset;
+    z-index: 6;
+    color: var(--color-primary-very-dark);
+    font-size: 24px;
+    transition: color var(--unitypad-navbar-animations-length) ease-in-out;
+}
+
+.unitypad-navbar .navbar-toggler:hover {
+    color: var(--unitypad-navbar-link-hover);
+}
+
+.unitypad-navbar .navbar-toggler:focus,
+.unitypad-navbar .navbar-toggler:active,
+.unitypad-navbar .navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    color: var(--unitypad-navbar-link);
+}
+
+.unitypad-navbar :is(.nav-item .nav-link) {
+    color: var(--unitypad-navbar-link);
+    transition: color var(--unitypad-navbar-animations-length) ease-in-out;
+}
+
+.unitypad-navbar :is(.nav-item .nav-link.active) {
+    color: var(--unitypad-navbar-link-active);
+}
+
+.unitypad-navbar .nav-item :is(.nav-link:hover, .nav-link.active:hover) {
+    color: var(--unitypad-navbar-link-hover);
+}
+
+.unitypad-navbar .navbar-logo {
+    height: 30px;
+    max-height: 30px;
+    transition-property: height, opacity;
+    transition: var(--unitypad-navbar-animations-length) ease-in-out;
+}
+
+.unitypad-navbar .launch-app-button {
+    border: var(--unitypad-border-width) solid;
+    border-color: var(--unitypad-border-color);
+    background-color: var(--unitypad-button-background);
+    transition: border-color var(--unitypad-navbar-animations-length) ease-in-out, transform 50ms ease-in-out;
+    color: var(--unitypad-color-white);
+    text-decoration: none;
+    padding: 5px 10px;
+    /* min-height: 48px!important; */
+    border-radius: 20px;
+    border-radius: var(--unitypad-border-radius);
+}
+
+.unitypad-navbar :is(.launch-app-button):hover {
+    border-color: var(--unitypad-navbar-link-hover);
+}
+
+.unitypad-navbar :is(.launch-app-button):active {
+    border-color: var(--unitypad-navbar-link-active);
+    transform: scale(1.06);
+}
+
+@media (min-width: 992px) {
+    .unitypad-navbar {
+        background-color: var(--unitypad-navbar-background-pc);
+    }
+    .unitypad-navbar.scrolled {
+        background-color: var(--unitypad-navbar-background);
+    }
+}

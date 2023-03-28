@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Akkurat-Regular';
+    /*a name to be used later*/
+    src: url('../assets/fonts/Akkurat-Regular.ttf');
+    /*URL to font*/
+}
+
+@font-face {
+    font-family: 'Akkurat-Bold';
+    /*a name to be used later*/
+    src: url('../assets/fonts/Akkurat-Bold.ttf');
+    /*URL to font*/
+}
+
+@font-face {
+    font-family: 'Akkurat-Light';
+    /*a name to be used later*/
+    src: url('../assets/fonts/Akkurat-Light.ttf');
+    /*URL to font*/
+}

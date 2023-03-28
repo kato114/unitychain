@@ -1,0 +1,360 @@
+specVersion: 0.0.2
+schema:
+  file: ./schema.graphql
+
+dataSources:
+  - kind: ethereum/contract
+    name: ChainlinkAggregatorETH
+    network: arbitrum-one
+    source:
+      address: "0x3607e46698d218b3a5cae44bf381475c0a5e2ca7"
+      abi: ChainlinkAggregator
+      startBlock: 24516765
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - ChainlinkPrice
+      abis:
+        - name: ChainlinkAggregator
+          file: ./abis/ChainlinkAggregator.json
+      eventHandlers:
+        - event: AnswerUpdated(indexed int256,indexed uint256,uint256)
+          handler: handleAnswerUpdatedETH
+      file: ./src/pricesMapping.ts
+
+  - kind: ethereum/contract
+    name: ChainlinkAggregatorBNB
+    network: arbitrum-one
+    source:
+      address: "0x9c65bc9c18f754129ba00c5298b539e69a32102d"
+      abi: ChainlinkAggregator
+      startBlock: 24516765
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - ChainlinkPrice
+      abis:
+        - name: ChainlinkAggregator
+          file: ./abis/ChainlinkAggregator.json
+      eventHandlers:
+        - event: AnswerUpdated(indexed int256,indexed uint256,uint256)
+          handler: handleAnswerUpdatedBNB
+      file: ./src/pricesMapping.ts
+
+  - kind: ethereum/contract
+    name: ChainlinkAggregatorBTC
+    network: arbitrum-one
+    source:
+      address: "0xb20bd22d3d2e5a628523d37b3ded569598eb649b"
+      abi: ChainlinkAggregator
+      startBlock: 24516765
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - ChainlinkPrice
+      abis:
+        - name: ChainlinkAggregator
+          file: ./abis/ChainlinkAggregator.json
+      eventHandlers:
+        - event: AnswerUpdated(indexed int256,indexed uint256,uint256)
+          handler: handleAnswerUpdatedBTC
+      file: ./src/pricesMapping.ts
+
+  - kind: ethereum/contract
+    name: ChainlinkAggregatorAAVE
+    network: arbitrum-one
+    source:
+      address: "0x3c6abda21358c15601a3175d8dd66d0c572cc904"
+      abi: ChainlinkAggregator
+      startBlock: 24516765
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - ChainlinkPrice
+      abis:
+        - name: ChainlinkAggregator
+          file: ./abis/ChainlinkAggregator.json
+      eventHandlers:
+        - event: AnswerUpdated(indexed int256,indexed uint256,uint256)
+          handler: handleAnswerUpdatedAAVE
+      file: ./src/pricesMapping.ts
+
+  - kind: ethereum/contract
+    name: ChainlinkAggregatorLINK
+    network: arbitrum-one
+    source:
+      address: "0x9b8ddcf800a7bfcdebad6d65514de59160a2c9cc"
+      abi: ChainlinkAggregator
+      startBlock: 24516765
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - ChainlinkPrice
+      abis:
+        - name: ChainlinkAggregator
+          file: ./abis/ChainlinkAggregator.json
+      eventHandlers:
+        - event: AnswerUpdated(indexed int256,indexed uint256,uint256)
+          handler: handleAnswerUpdatedLINK
+      file: ./src/pricesMapping.ts
+
+  - kind: ethereum/contract
+    name: ChainlinkAggregatorFRAX
+    network: arbitrum-one
+    source:
+      address: "0x5d041081725468aa43e72ff0445fde2ad1ade775"
+      abi: ChainlinkAggregator
+      startBlock: 24516765
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - ChainlinkPrice
+      abis:
+        - name: ChainlinkAggregator
+          file: ./abis/ChainlinkAggregator.json
+      eventHandlers:
+        - event: AnswerUpdated(indexed int256,indexed uint256,uint256)
+          handler: handleAnswerUpdatedFRAX
+      file: ./src/pricesMapping.ts
+
+  - kind: ethereum/contract
+    name: ChainlinkAggregatorUSDT
+    network: arbitrum-one
+    source:
+      address: "0xcb35fe6e53e71b30301ec4a3948da4ad3c65ace4"
+      abi: ChainlinkAggregator
+      startBlock: 24516765
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - ChainlinkPrice
+      abis:
+        - name: ChainlinkAggregator
+          file: ./abis/ChainlinkAggregator.json
+      eventHandlers:
+        - event: AnswerUpdated(indexed int256,indexed uint256,uint256)
+          handler: handleAnswerUpdatedUSDT
+      file: ./src/pricesMapping.ts
+
+  - kind: ethereum/contract
+    name: ChainlinkAggregatorUSDC
+    network: arbitrum-one
+    source:
+      address: "0x2946220288dbbf77df0030fcecc2a8348cbbe32c"
+      abi: ChainlinkAggregator
+      startBlock: 24516765
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - ChainlinkPrice
+      abis:
+        - name: ChainlinkAggregator
+          file: ./abis/ChainlinkAggregator.json
+      eventHandlers:
+        - event: AnswerUpdated(indexed int256,indexed uint256,uint256)
+          handler: handleAnswerUpdatedUSDC
+      file: ./src/pricesMapping.ts
+
+  - kind: ethereum/contract
+    name: ChainlinkAggregatorDAI
+    network: arbitrum-one
+    source:
+      address: "0xfc06bb03a9e1d8033f87ea6a682cbd65477a43b9"
+      abi: ChainlinkAggregator
+      startBlock: 24516765
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - ChainlinkPrice
+      abis:
+        - name: ChainlinkAggregator
+          file: ./abis/ChainlinkAggregator.json
+      eventHandlers:
+        - event: AnswerUpdated(indexed int256,indexed uint256,uint256)
+          handler: handleAnswerUpdatedDAI
+      file: ./src/pricesMapping.ts
+
+  - kind: ethereum/contract
+    name: UlpManager
+    network: arbitrum-one
+    source:
+      address: "0x6DdB17895eBf0c24Fe41801D153569D9fda93990"
+      abi: UlpManager
+      startBlock: 24516765
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - HourlyUlpStat
+      abis:
+        - name: UlpManager
+          file: ./abis/UlpManager.json
+      eventHandlers:
+        - event: AddLiquidity(address,address,uint256,uint256,uint256,uint256,uint256)
+          handler: handleAddLiquidity
+        - event: RemoveLiquidity(address,address,uint256,uint256,uint256,uint256,uint256)
+          handler: handleRemoveLiquidity
+      file: ./src/mapping.ts
+
+  - kind: ethereum/contract
+    name: OrderBook
+    network: arbitrum-one
+    source:
+      address: "0x64CC32C8aE44D508eb77a70dE3Db7933EF19C4B3"
+      abi: OrderBook
+      startBlock: 24516765
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Order
+      abis:
+        - name: OrderBook
+          file: ./abis/OrderBook.json
+      eventHandlers:
+        - event: CreateIncreaseOrder(indexed address,uint256,address,uint256,address,address,uint256,bool,uint256,bool,uint256)
+          handler: handleCreateIncreaseOrder
+        - event: CancelIncreaseOrder(indexed address,uint256,address,uint256,address,address,uint256,bool,uint256,bool,uint256)
+          handler: handleCancelIncreaseOrder
+        - event: ExecuteIncreaseOrder(indexed address,uint256,address,uint256,address,address,uint256,bool,uint256,bool,uint256,uint256)
+          handler: handleExecuteIncreaseOrder
+
+        - event: CreateDecreaseOrder(indexed address,uint256,address,uint256,address,uint256,bool,uint256,bool,uint256)
+          handler: handleCreateDecreaseOrder
+        - event: CancelDecreaseOrder(indexed address,uint256,address,uint256,address,uint256,bool,uint256,bool,uint256)
+          handler: handleCancelDecreaseOrder
+        - event: ExecuteDecreaseOrder(indexed address,uint256,address,uint256,address,uint256,bool,uint256,bool,uint256,uint256)
+          handler: handleExecuteDecreaseOrder
+
+        - event: CreateSwapOrder(indexed address,uint256,address[],uint256,uint256,uint256,bool,bool,uint256)
+          handler: handleCreateSwapOrder
+        - event: CancelSwapOrder(indexed address,uint256,address[],uint256,uint256,uint256,bool,bool,uint256)
+          handler: handleCancelSwapOrder
+        - event: ExecuteSwapOrder(indexed address,uint256,address[],uint256,uint256,uint256,uint256,bool,bool,uint256)
+          handler: handleExecuteSwapOrder
+      file: ./src/ordersMapping.ts
+
+  - kind: ethereum/contract
+    name: FastPriceEvents
+    network: arbitrum-one
+    source:
+      address: "0xAe936d3e6665BdF1D06404CF4586884cf002950d"
+      abi: FastPriceEvents
+      startBlock: 24516765
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - FastPrice
+      abis:
+        - name: FastPriceEvents
+          file: ./abis/FastPriceEvents.json
+      eventHandlers:
+        - event: PriceUpdate(address,uint256,address)
+          handler: handlePriceUpdate
+      file: ./src/pricesMapping.ts
+
+  - kind: ethereum/contract
+    name: Vault2
+    network: arbitrum-one
+    source:
+      address: "0x18d289ED284bd5Cd43cD29b3AB5CC69f4EeEB1ea"
+      abi: Vault
+      startBlock: 24516765
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - TradingStat
+      abis:
+        - name: Vault
+          file: ./abis/VaultV2.json
+      eventHandlers:
+        - event: ClosePosition(bytes32,uint256,uint256,uint256,uint256,uint256,int256)
+          handler: handleClosePosition
+        - event: IncreasePosition(bytes32,address,address,address,uint256,uint256,bool,uint256,uint256)
+          handler: handleIncreasePosition
+        - event: DecreasePosition(bytes32,address,address,address,uint256,uint256,bool,uint256,uint256)
+          handler: handleDecreasePosition
+        - event: LiquidatePosition(bytes32,address,address,address,bool,uint256,uint256,uint256,int256,uint256)
+          handler: handleLiquidatePosition
+      file: ./src/tradingMapping.ts
+
+  - kind: ethereum/contract
+    name: Vault
+    network: arbitrum-one
+    source:
+      address: "0x18d289ED284bd5Cd43cD29b3AB5CC69f4EeEB1ea"
+      abi: Vault
+      startBlock: 24516765
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Swap
+        - IncreasePosition
+        - DecreasePosition
+        - HourlyVolume
+        - HourlyVolumeBySource
+        - HourlyVolumeByToken
+        - HourlyFee
+        - Transaction
+        - FundingFee
+      abis:
+        - name: Vault
+          file: ./abis/VaultV2.json
+      eventHandlers:
+        - event: UpdateFundingRate(address,uint256)
+          handler: handleUpdateFundingRate
+        - event: Swap(address,address,address,uint256,uint256,uint256,uint256)
+          handler: handleSwap
+        - event: CollectMarginFees(address,uint256,uint256)
+          handler: handleCollectMarginFees
+        - event: BuyUSDG(address,address,uint256,uint256,uint256)
+          handler: handleBuyUSDG
+        - event: SellUSDG(address,address,uint256,uint256,uint256)
+          handler: handleSellUSDG
+        - event: IncreasePosition(bytes32,address,address,address,uint256,uint256,bool,uint256,uint256)
+          handler: handleIncreasePosition
+        - event: DecreasePosition(bytes32,address,address,address,uint256,uint256,bool,uint256,uint256)
+          handler: handleDecreasePosition
+        - event: UpdatePosition(bytes32,uint256,uint256,uint256,uint256,uint256,int256,uint256)
+          handler: handleUpdatePosition
+        - event: LiquidatePosition(bytes32,address,address,address,bool,uint256,uint256,uint256,int256,uint256)
+          handler: handleLiquidatePosition
+        - event: IncreasePoolAmount(address,uint256)
+          handler: handleIncreasePoolAmount
+        - event: DecreasePoolAmount(address,uint256)
+          handler: handleDecreasePoolAmount
+        - event: IncreaseReservedAmount(address,uint256)
+          handler: handleIncreaseReservedAmount
+        - event: DecreaseReservedAmount(address,uint256)
+          handler: handleDecreaseReservedAmount
+        - event: IncreaseUsdgAmount(address,uint256)
+          handler: handleIncreaseUsdgAmount
+        - event: DecreaseUsdgAmount(address,uint256)
+          handler: handleDecreaseUsdgAmount
+      file: ./src/mapping.ts

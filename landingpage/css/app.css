@@ -1,0 +1,358 @@
+.app-homepage .logo {
+    max-width: 250px;
+    max-height: 250px;
+}
+
+.app-section-card {
+    flex: 0 1;
+    min-width: 300px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+    padding-top: 22px;
+    background-color: var(--unitypad-panel-background);
+    border: 1px var(--unitypad-border-color) solid;
+    border-radius: var(--unitypad-border-radius);
+}
+
+.app-section-card h4 {
+    color: var(--color-primary);
+    font-size: 1rem;
+    margin-bottom: 0px;
+}
+
+.app-section-card img {
+    z-index: 2;
+    margin: 0 auto;
+    padding-top: 10px;
+    margin-top: auto;
+    width: 100%;
+    max-width: 50px;
+}
+
+.app-section-card-decoration {
+    position: absolute;
+    z-index: 1;
+    transform: rotate(-45deg) scale(1.1);
+    bottom: -40px;
+    left: 0px;
+
+}
+
+.app-section-card .name {
+    z-index: 2;
+    font-family: var(--unitypad-font-main-bold);
+    font-size: 1.5rem;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.unitypad-button-main {
+    padding: 10px 10px;
+}
+
+.launch-app-button img {
+    height: 20px;
+    width: 20px;
+}
+
+
+/** app-squares  */
+.app-square-card {
+    background-color: var(--unitypad-panel-background);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 10px;
+    border-radius: var(--unitypad-border-radius);
+}
+
+.app-square-decoration {
+    position: absolute;
+    z-index: 1;
+    transform: rotate(-45deg) scale(1.1);
+    bottom: -40px;
+    left: 0px;
+
+}
+
+.app-square-card .content {
+    position: relative;
+    z-index: 2;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.app-square-card .app-square-icon {
+    height: 100%;
+    margin: auto;
+    max-height: 88px;
+}
+
+.app-square-card .content h4 {
+    font-family: var(--unitypad-font-main-bold);
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.app-square-card .content p {
+    font-family: var(--unitypad-font-main-light);
+    font-size: 0.8rem;
+    margin-bottom: 0;
+}
+
+.app-square-card {
+    width: 100%;
+}
+
+.app-square-cards-wrapper.bordered .app-square-card {
+    border: 1px var(--unitypad-border-color) solid;
+}
+
+@media (min-width: 768px) {
+    .app-square-card {
+        height: 200px;
+        width: 200px;
+    }
+
+    .app-square-card .content h4 {
+        font-size: 1rem;
+    }
+
+    .app-square-card .content p {
+        font-size: 0.6rem;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .app-square-card {
+        height: 240px;
+        width: 240px;
+    }
+
+    .app-square-card .content h4 {
+        font-size: 1.2rem;
+    }
+
+    .app-square-card .content p {
+        font-size: 0.8rem;
+    }
+
+}
+
+.chain-card-wrapper {
+    width: 100%;
+    max-width: 1100px;
+}
+
+.chain-card {
+    padding: 8px 10px;
+    background-color: var(--unitypad-panel-background);
+    display: flex;
+    border: 1px solid var(--unitypad-border-color);
+    border-radius: var(--unitypad-border-radius);
+    width: 100%;
+    max-width: 400px;
+}
+
+@media (min-width: 1200px) {
+
+    .chain-card {
+        width: calc(100% / 2);
+        max-width: 400px;
+    }
+}
+
+.chain-card p {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+.chain-card a {
+    font-family: var(--unitypad-font-main-bold);
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    text-decoration: none;
+    transition: color 250ms ease-in-out;
+}
+
+.chain-card a:hover {
+    color: var(--color-primary-hover);
+}
+
+.chain-card img {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 5px;
+    width: 24px;
+    height: 24px;
+}
+
+.app-part-section {
+    margin-top: var(--app-part-section-margin);
+    margin-bottom: var(--app-part-section-margin);
+}
+
+.dashboard-column {
+    max-width: 400px;
+}
+
+.dashboard-card {
+    min-height: 46px;
+    text-align: start;
+    padding: 10px 10px;
+    background-color: var(--unitypad-panel-background-secondary);
+    display: flex;
+    border: 1px solid var(--unitypad-border-color);
+    border-radius: var(--unitypad-border-radius);
+}
+
+.dashboard-card.empty {
+    background-color: var(--unitypad-panel-background);
+
+}
+
+.dashboard-card p {
+    font-size: 0.8rem;
+    color: var(--color-primary);
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.dashboard-card p:nth-child(2) {
+    color: var(--color-white);
+    font-size: 0.8rem;
+    margin-left: auto;
+}
+
+.app-section-title {
+    font-size: 1rem;
+}
+
+.font-40 {
+    font-size: 2.5rem;
+}
+
+.dashboard-card-header {
+    flex: 1 0;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--unitypad-panel-background-secondary);
+    border: 1px solid var(--unitypad-border-color);
+    border-radius: var(--unitypad-border-radius);
+    padding: 10px;
+    text-align: start;
+
+}
+
+.dashboard-card-header .decoration {
+    position: absolute;
+    z-index: 1;
+    transform: rotate(-45deg) scale(0.8);
+    bottom: 20px;
+    right: 00px;
+
+}
+
+.dashboard-card-header .content {
+    position: relative;
+    z-index: 2;
+}
+
+.dashboard-card-header img {
+    max-height: 80px;
+    max-width: 80px;
+}
+
+.dashboard-card-header .content .title {
+    font-size: 25px;
+    margin-bottom: 0;
+}
+
+.dashboard-card-header .content .text {
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+.dashboard-card a {
+    font-family: var(--unitypad-font-main-bold);
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    text-decoration: none;
+    transition: color 250ms ease-in-out;
+}
+
+.dashboard-card a:hover {
+    color: var(--color-primary-hover);
+}
+
+
+
+.app-referral-card {
+    flex: 0 1;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+    padding-top: 22px;
+    background-color: var(--unitypad-panel-background);
+    border: 1px var(--unitypad-border-color) solid;
+    border-radius: var(--unitypad-border-radius);
+}
+
+.app-referral-card h4 {
+    z-index: 2;
+    color: var(--color-white);
+    font-size: 1.4rem;
+    margin-bottom: 0px;
+}
+
+.app-referral-card img {
+    z-index: 2;
+    margin: 0 auto;
+    padding-top: 10px;
+    margin-top: auto;
+    width: 100%;
+    max-width: 50px;
+}
+
+.app-referral-card-decoration {
+    position: absolute;
+    z-index: 1;
+    transform: rotate(-45deg) scale(1.1);
+    bottom: -40px;
+    left: 0px;
+
+}
+
+.app-referral-card .name {
+    z-index: 2;
+    font-family: var(--unitypad-font-main-light);
+    font-size: 1rem;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.app-section-card.ecosystem h4 {
+    font-family: var(--unitypad-font-main-bold);
+    color: var(--color-white);
+    font-size: 1.3rem;
+}
+.app-section-card.ecosystem .name {
+    font-family: var(--unitypad-font-main-light);
+    color: var(--color-white);
+    font-size: 1rem;
+}

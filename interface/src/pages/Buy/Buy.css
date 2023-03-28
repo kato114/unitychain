@@ -1,0 +1,34 @@
+.BuyUNITYULP {
+  background: none;
+  justify-content: space-between;
+}
+
+.BuyUNITYULPIcon {
+  display: none;
+}
+
+.BuyUNITYULP-container {
+  padding: 0 0 3.1rem 0;
+  width: 100%;
+}
+
+.BuyUNITYULP-container h3 span {
+  color: #c81919;
+}
+
+.BuyUNITYULP-container .section-title-content {
+  justify-content: flex-start;
+}
+
+@media (max-width: 400px) {
+  .BuyUNITYULP-container {
+    padding-left: 1.6rem !important;
+    padding-right: 1.6rem !important;
+  }
+}
+
+@media (max-width: 1033px) {
+  .BuyUNITYULPIcon {
+    display: block;
+  }
+}
